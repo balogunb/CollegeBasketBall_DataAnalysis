@@ -82,8 +82,24 @@ for x in range(2015,2020):
 
 
 
-#Determining the most competitive conferences by PowerRating 
-confList = af.getConfAverages(df,'BARTHAG','2019')
-print(len(confList))
+#Determining the most competitive conferences over the years by PowerRating 
+compDf =  pd.DataFrame()
+
+for x in range(2015,2020):
+	confList = af.getConfAverages(df,'BARTHAG',str(x))
+	confNames = []
+	confAvg  = []
+	for y in confList:
+		confNames.append(y['name'])
+		confAvg.append(y['val'])
+	compDf['CONF'] = confNames
+	compDf[str(x)] = confAvg
+
+#average conferance power ranking data frame from 2015-2019
+print(compDf)
+
+
+
+
 
 
