@@ -1,4 +1,6 @@
 import pandas as pd
+import analysisFunctions as af 
+import visualAnalysisFunctions as vf
 
 
 #import csv file
@@ -36,8 +38,9 @@ YEAR - Season
 
 #print(df)
 
-#replace all null values with -inf
-df = df.fillna(float("-inf"))
+#replace all null values with 0
+#df = df.fillna(float("-inf"))
+df = df.fillna(0)
 
 
 
@@ -57,22 +60,30 @@ print (' ')
 laf = 'Lafayette'
 if df['TEAM'].str.contains(laf).sum() > 0:
 	print('contains Lafayette')
-	print(df[df['TEAM'].str.contains(laf)])
-	print (' ')
+	#print(df[df['TEAM'].str.contains(laf)])
+	#print (' ')
 
 
 
 #Split College stats into different data frames by year and export
 #to a new csv file
+dfList = [] #list holding dataframes for each year 
 for x in range(2015,2020):
 	if df['YEAR'].astype(str).str.contains(str(x)).sum() > 0:
-		print(df[df['YEAR'].astype(str).str.contains(str(x))])
-		print (' ')
+		csvname = 'CollegeBB_stats' + str(x) + '.csv'
+		newDf = df[df['YEAR'].astype(str).str.contains(str(x))]
+		#print(newDf)
+		dfList.append(newDf)
+		newDf.to_csv(csvname)
+		#print (' ')
 
 
 
 
 
 
-	#print(df[df['TEAM'].str.contains(laf)])
-	#print (' ')
+#Determining the most competitive conferences by PowerRating 
+confList = af.getConfAverages(df,'BARTHAG','2019')
+print(len(confList))
+
+
