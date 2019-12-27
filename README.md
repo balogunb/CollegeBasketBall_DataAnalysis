@@ -6,6 +6,8 @@ Author: Basit Balogun
 
 
 INTRODUCTION
+
+
 This repository contains analysis on College Basketball dataset to make inferences and predictions. The dataset contains a total of 355 teams accross 33 Division 1 conferences. It contains data from 2015 - 2019. The data is gotten from kaggle and the link would be listed below. I used the cbb.csv file for all analysis and the file analysis.py is the main script to be run.
 
 Link: https://www.kaggle.com/andrewsundberg/college-basketball-dataset/data
@@ -20,6 +22,7 @@ REQUIRED DEPENDECIES
 
 
 RESULTS 
+
 - Cleaned data by replacing all null values with 0
 - Determined the total number of teams in the data set 
   Total number of teams = 355
