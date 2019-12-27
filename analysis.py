@@ -96,7 +96,9 @@ for x in range(2015,2020):
 	compDf[str(x)] = confAvg
 
 #average conferance power ranking data frame from 2015-2019
-print(compDf)
+compDf = compDf.fillna(0)
+#print(compDf)
+vf.visualizedataSet(compDf,'Conference Rankings')
 
 
 

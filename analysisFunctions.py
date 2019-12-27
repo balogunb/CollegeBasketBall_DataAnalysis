@@ -8,7 +8,7 @@ def getConfAverages(df, colNam,year):
 	confList = [] #list which would hold conferences and their avarages
 	confNames = df['CONF'].unique()
 	confNames.sort()
-	print(len(confNames))
+	#print(len(confNames))
 	
 
 	#for each conference determine the col average and add to confList
@@ -16,10 +16,10 @@ def getConfAverages(df, colNam,year):
 		newDf = df[df['CONF'].str.match(confNames[x])] 
 		newDf = newDf[newDf['YEAR'].astype(str).str.contains(year)]
 		confMean = newDf[colNam].mean() #calc mean of req columns
-		print(confNames[x] + " " + str(confMean))
+		#print(confNames[x] + " " + str(confMean))
 		obj = {"name":confNames[x],"stat":colNam,"val":confMean}
 		confList.append(obj)
-		print(" ")
+		#print(" ")
 
 
 	return confList
