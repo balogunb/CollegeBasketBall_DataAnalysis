@@ -17,8 +17,6 @@ def visualizedataSet(df,title):
 	print(df)
 	print(confName)
 	df2 = df.drop(confName,axis = 1)
-	#print(df)
-	#"""
 	
 
 	
