@@ -1,8 +1,8 @@
 # CollegeBasketBall_DataAnalysis
-//---------------------------------------------------------------
-// Programming Language: Python
-// Author: Basit Balogun
-//---------------------------------------------------------------
+
+Programming Language: Python
+Author: Basit Balogun
+
 
 INTRODUCTION
 This repository contains analysis on College Basketball dataset to make inferences and predictions. The dataset contains a total of 355 teams accross 33 Division 1 conferences. It contains data from 2015 - 2019. The data is gotten from kaggle and the link would be listed below. I used the cbb.csv file for all analysis and the file analysis.py is the main script to be run.
@@ -32,13 +32,6 @@ RESULTS
 
 
 Further Analysis Coming soon
-
-
-
-
-Information gotten from analysis
-Number of team - 355
-Number of divisions - 33
 
 
 
