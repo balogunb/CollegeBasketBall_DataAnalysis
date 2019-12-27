@@ -1,3 +1,14 @@
+"""
+//---------------------------------------------------------------
+// File: analysis.py
+// Purpose: handles analysis of college BB data
+// Programming Language: Python
+// Author: Basit Balogun
+// Version: 1.0
+//---------------------------------------------------------------
+"""
+
+
 import pandas as pd
 import analysisFunctions as af 
 import visualAnalysisFunctions as vf
@@ -61,7 +72,7 @@ laf = 'Lafayette'
 if df['TEAM'].str.contains(laf).sum() > 0:
 	print('contains Lafayette')
 	#print(df[df['TEAM'].str.contains(laf)])
-	#print (' ')
+	print (' ')
 
 
 

@@ -1,3 +1,13 @@
+"""
+//---------------------------------------------------------------
+// File: visualAnalysisFunctions.py
+// Purpose: Holds functions used for grpahical analysis
+// Programming Language: Python
+// Author: Basit Balogun
+// Version: 1.0
+//---------------------------------------------------------------
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -14,8 +24,11 @@ def visualizedataSet(df,title):
 	columns = list(df.columns.values)
 	confName = columns.pop(0)
 	df = df.sort_values(by = columns[-1],ascending = False)
+
+	print('Data frame sorted by Highest Power Rank 2019')
 	print(df)
-	print(confName)
+	print(' ')
+	#print(confName)
 	df2 = df.drop(confName,axis = 1)
 	
 
@@ -28,3 +41,7 @@ def visualizedataSet(df,title):
 	plt.legend(list(newDF[confName]), loc=3)
 	plt.grid()
 	plt.show()
+
+
+
+#MORE TO COME

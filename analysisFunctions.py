@@ -1,3 +1,18 @@
+"""
+//---------------------------------------------------------------
+// File: analysisFunctions.py
+// Purpose: Holds functions used for analysing dataframes
+// Programming Language: Python
+// Author: Basit Balogun
+// Version: 1.0
+//---------------------------------------------------------------
+"""
+
+
+
+
+
+
 import pandas as pd
 
 
@@ -23,3 +38,7 @@ def getConfAverages(df, colNam,year):
 
 
 	return confList
+
+
+
+#MORE TO COME
