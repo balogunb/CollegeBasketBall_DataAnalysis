@@ -1,7 +1,7 @@
 """
 //---------------------------------------------------------------
 // File: visualAnalysisFunctions.py
-// Purpose: Holds functions used for grpahical analysis
+// Purpose: Holds functions used for graphical analysis
 // Programming Language: Python
 // Author: Basit Balogun
 // Version: 1.0
